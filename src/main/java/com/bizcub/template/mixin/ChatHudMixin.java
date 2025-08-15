@@ -10,6 +10,6 @@ public class ChatHudMixin {
 
     @ModifyVariable(method = "render", at = @At(value = "HEAD"), ordinal = 0, argsOnly = true)
     private int render(int currentTick) {
-        return currentTick + 200 - (20 * 10);
+        return currentTick + 200 - (20 * 2);
     }
 }

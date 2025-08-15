@@ -1,5 +1,8 @@
-package com.bizcub.template.mixin;
+package com.bizcub.messageDisplayTime.mixin;
 
+import com.bizcub.messageDisplayTime.MessageDisplayTime;
+import com.bizcub.messageDisplayTime.config.Compat;
+import com.bizcub.messageDisplayTime.config.Configs;
 import net.minecraft.client.gui.hud.ChatHud;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -10,6 +13,7 @@ public class ChatHudMixin {
 
     @ModifyVariable(method = "render", at = @At(value = "HEAD"), ordinal = 0, argsOnly = true)
     private int render(int currentTick) {
-        return currentTick + 200 - (20 * 2);
+        if (Compat.isModLoaded(MessageDisplayTime.clothConfigId)) return currentTick + 200 - (20 * Configs.getInstance().sec);
+        return currentTick + 100;
     }
 }

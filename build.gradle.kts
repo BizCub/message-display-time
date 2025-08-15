@@ -23,6 +23,8 @@ architectury.common(stonecutter.tree.branches.mapNotNull {
 
 repositories {
     maven("https://maven.neoforged.net/releases/")
+    maven("https://maven.shedaniel.me/")
+    maven("https://maven.terraformersmc.com/releases/")
 }
 
 dependencies {
@@ -32,10 +34,13 @@ dependencies {
     if (loader == "fabric") {
         modImplementation("net.fabricmc:fabric-loader:0.16.14")
         mappings("net.fabricmc:yarn:$minecraft+build.${mod.dep("yarn_build")}:v2")
+        modApi("com.terraformersmc:modmenu:${mod.modmenu}")
+        modApi("me.shedaniel.cloth:cloth-config-fabric:${mod.cloth_config}")
     }
     if (loader == "forge") {
         "forge"("net.minecraftforge:forge:${minecraft}-${mod.dep("forge_loader")}")
         mappings("net.fabricmc:yarn:$minecraft+build.${mod.dep("yarn_build")}:v2")
+        modApi("me.shedaniel.cloth:cloth-config-forge:${mod.cloth_config}")
     }
     if (loader == "neoforge") {
         "neoForge"("net.neoforged:neoforge:${mod.dep("neoforge_loader")}")
@@ -45,6 +50,7 @@ dependencies {
                 mappings("dev.architectury:yarn-mappings-patch-neoforge:$it")
             }
         })
+        modApi("me.shedaniel.cloth:cloth-config-neoforge:${mod.cloth_config}")
     }
 }
 

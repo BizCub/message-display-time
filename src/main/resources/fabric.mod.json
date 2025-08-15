@@ -13,7 +13,14 @@
   },
   "license": "MIT",
   "icon": "icon.png",
-  "entrypoints": {},
+  "entrypoints": {
+    "main": [
+      "com.bizcub.messageDisplayTime.platforms.Fabric"
+    ],
+    "modmenu": [
+      "com.bizcub.messageDisplayTime.config.ModMenu"
+    ]
+  },
   "mixins": [
     "${id}-common.mixins.json"
   ]

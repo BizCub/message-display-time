@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.bizcub.template.platforms.forge.mixin",
+  "package": "com.bizcub.messageDisplayTime.platforms.forge.mixin",
   "mixins": [
   ],
   "injectors": {

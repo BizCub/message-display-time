@@ -76,8 +76,8 @@ if (localPropertiesFile.exists()) {
 }
 
 publishMods {
-    file = rootProject.file("build/libs/${mod.version}/$loader/${mod.id}-$loader-${mod.version}+${mod.mc_start}.jar")
-    displayName = "${mod.name} ${loader.replaceFirstChar { it.uppercase() }} ${property("mod.mc_start")} v${mod.version}"
+    file = rootProject.file("build/libs/${mod.version}/$loader/$mixinId-$loader-${mod.version}+${mod.mc_start}.jar")
+    displayName = "${mod.name} ${loader.capitalize()} ${property("mod.mc_start")} v${mod.version}"
     changelog = rootProject.file("CHANGELOG.md").readText()
     version = mod.version
     type = STABLE

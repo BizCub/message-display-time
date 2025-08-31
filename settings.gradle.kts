@@ -28,4 +28,4 @@ stonecutter {
     create(rootProject)
 }
 
-rootProject.name = "Message Display Time"
+rootProject.name = settings.extra["mod.name"] as String

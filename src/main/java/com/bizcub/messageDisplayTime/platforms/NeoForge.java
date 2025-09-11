@@ -1,4 +1,4 @@
-//? if neoforge {
+//? neoforge {
 /*package com.bizcub.messageDisplayTime.platforms;
 
 import com.bizcub.messageDisplayTime.MessageDisplayTime;

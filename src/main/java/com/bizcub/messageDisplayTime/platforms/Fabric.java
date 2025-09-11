@@ -1,4 +1,4 @@
-//? if fabric {
+//? fabric {
 package com.bizcub.messageDisplayTime.platforms;
 
 import com.bizcub.messageDisplayTime.MessageDisplayTime;

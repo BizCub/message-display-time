@@ -1,4 +1,4 @@
-//? if forge {
+//? forge {
 /*package com.bizcub.messageDisplayTime.platforms;
 
 import com.bizcub.messageDisplayTime.MessageDisplayTime;

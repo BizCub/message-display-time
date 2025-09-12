@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(ChatHud.class)
 public class ChatHudMixin {
 
-    @ModifyVariable(method = "render", at = @At(value = "HEAD"), argsOnly = true)
+    @ModifyVariable(method = "render", at = @At(value = "HEAD"), argsOnly = true, ordinal = 0)
     private int render(int currentTick) {
         if (Compat.isModLoaded(MessageDisplayTime.clothConfigId)) return currentTick + 200 - (20 * Configs.getInstance().sec);
         return currentTick + 100;

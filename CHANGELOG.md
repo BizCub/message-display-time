@@ -1,1 +1,1 @@
-* The list of versions has been expanded
+* Hotfix of crashes

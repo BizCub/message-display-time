@@ -4,14 +4,10 @@
 import com.bizcub.messageDisplayTime.MessageDisplayTime;
 import com.bizcub.messageDisplayTime.config.Configs;
 import me.shedaniel.autoconfig.AutoConfig;
-//? if >=1.19 {
-/^import net.minecraftforge.client.ConfigScreenHandler;
-^///?} elif >=1.18 {
-/^import net.minecraftforge.client.ConfigGuiHandler;
-^///?} elif >=1.17 {
-/^import net.minecraftforge.fmlclient.ConfigGuiHandler;
-^///?} else {
-import net.minecraftforge.fml.ExtensionPoint;//?}
+/^? >=1.19^/ /^import net.minecraftforge.client.ConfigScreenHandler;^/
+/^? >=1.18 && <=1.18.2^/ /^import net.minecraftforge.client.ConfigGuiHandler;^/
+/^? >=1.17 && <=1.17.1^/ /^import net.minecraftforge.fmlclient.ConfigGuiHandler;^/
+/^? <=1.16.5^/ import net.minecraftforge.fml.ExtensionPoint;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 
@@ -21,23 +17,23 @@ public class Forge {
     public Forge() {
         MessageDisplayTime.init();
 
-        //? if >=1.19 {
+        //? >=1.19 {
         /^ModLoadingContext.get().registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () -> {
             return new ConfigScreenHandler.ConfigScreenFactory((minecraft, screen) -> {
-                return AutoConfig.getConfigScreen(Configs.class, screen).get();
+                return PlatformInit.getScreen(screen);
             });
         });
 
-        ^///?} elif >=1.17 {
+        ^///?} >=1.17 {
         /^ModLoadingContext.get().registerExtensionPoint(ConfigGuiHandler.ConfigGuiFactory.class,
                 () -> new ConfigGuiHandler.ConfigGuiFactory((client, parent) ->
-                        AutoConfig.getConfigScreen(Configs.class, parent).get())
+                        PlatformInit.getScreen(parent))
         );
 
         ^///?} else {
         ModLoadingContext.get().registerExtensionPoint(
-                ExtensionPoint.CONFIGGUIFACTORY,
-                () -> (mc, screen) -> AutoConfig.getConfigScreen(Configs.class, screen).get()
+                ExtensionPoint.CONFIGGUIFACTORY, () -> (mc, screen) ->
+                        PlatformInit.getScreen(screen)
         );//?}
     }
 }*///?}

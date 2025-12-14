@@ -5,6 +5,9 @@ package com.bizcub.messageDisplayTime.config;
 /*? neoforge*/ /*import net.neoforged.fml.ModList;*/
 
 public class Compat {
+    /*? (fabric && >=1.18) || (forge && <1.17)*/ public static final String clothConfigId = "cloth-config";
+    /*? (forge && >=1.17) || neoforge*/ /*public static final String clothConfigId = "cloth_config";*/
+    /*? fabric && <1.18*/ /*public static final String clothConfigId = "cloth-config2";*/
 
     public static boolean isModLoaded(String modId) {
         /*? fabric*/ return FabricLoader.getInstance().isModLoaded(modId);

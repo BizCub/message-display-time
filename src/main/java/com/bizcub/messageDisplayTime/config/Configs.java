@@ -10,8 +10,8 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 @Config(name = MessageDisplayTime.modId)
 public class Configs implements ConfigData {
 
-    @ConfigEntry.BoundedDiscrete(min = MessageDisplayTime.MIN_SEC, max = MessageDisplayTime.MAX_SEC)
-    public int sec = MessageDisplayTime.DEF_SEC;
+    @ConfigEntry.BoundedDiscrete(min = 0, max = 30)
+    public int sec = 5;
 
     public static Configs getInstance() {
         return AutoConfig.getConfigHolder(Configs.class).getConfig();

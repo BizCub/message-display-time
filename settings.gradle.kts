@@ -16,12 +16,16 @@ plugins {
 
 stonecutter {
     create(rootProject) {
-        fun mc(loader: String, vararg versions: String) {
-            for (version in versions) version("$version-$loader", version)
-        }
-        mc("fabric", "1.21.11", "1.20.5", "1.20", "1.19.3", "1.16.5")
-        mc("forge", "1.21.11", "1.20.6", "1.20", "1.19", "1.19.3", "1.18", "1.16.5")
-        mc("neoforge", "1.21.11", "1.21")
+        val fb = "fabric"; val fr = "forge"; val nf = "neoforge"
+        fun match(version: String, vararg loaders: String) = loaders
+            .forEach { version("$version-$it", version) }
+        match("1.21.11", fb, fr, nf)
+        match("1.21.1",  fb, fr, nf)
+        match("1.20",    fb, fr)
+        match("1.19.3",  fb, fr)
+        match("1.19",    fr)
+        match("1.18",    fr)
+        match("1.16.5",  fb, fr)
     }
 }
 

@@ -8,6 +8,7 @@ plugins {
 stonecutter {
     swaps["mod_id"] = "\"${prop("mod.id")}\";"
     constants.match(loader, "fabric", "forge", "neoforge")
+    constants["is_cloth_config_available"] = isClothConfigAvailable
 }
 
 repositories {

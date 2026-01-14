@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("java")
 }
@@ -29,3 +31,20 @@ tasks.processResources {
         "license" to "MIT"
     )
 }
+
+project.extra["loom.platform"] = loader
+
+fun loadExtraDependencies(project: Project, mcVers: String) {
+    val customPropsFile = project.rootProject.file("vers/$mcVers.properties")
+
+    if (customPropsFile.exists()) {
+        val customProps = Properties().apply {
+            customPropsFile.inputStream().use { load(it) }
+        }
+        customProps.forEach { (key, value) ->
+            project.extra[key.toString()] = value
+        }
+    }
+}
+
+loadExtraDependencies(project,mod.mc)

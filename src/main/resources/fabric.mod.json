@@ -18,7 +18,7 @@
             "com.bizcub.messageDisplayTime.platforms.Fabric"
         ],
         "modmenu": [
-            "com.bizcub.messageDisplayTime.platforms.Fabric"
+            "com.bizcub.messageDisplayTime.platforms.Fabric$ModMenu"
         ]
     },
     "mixins": [

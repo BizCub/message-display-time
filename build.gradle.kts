@@ -25,8 +25,9 @@ dependencies {
         modImplementation("net.fabricmc:fabric-loader:latest.release")
         modImplementation("com.terraformersmc:modmenu:${mod.modmenu}")
     }
-    if (isForge)
+    if (isForge) {
         "forge"("net.minecraftforge:forge:${mod.mc}-${mod.dep("forge_loader")}")
+    }
     if (isNeoForge) {
         "neoForge"("net.neoforged:neoforge:${mod.dep("neoforge_loader")}")
     }
@@ -58,6 +59,8 @@ publishMods {
     modrinth {
         projectId = mod.modrinth
         accessToken = tokenDir("modrinth")
+        if (isClothConfigAvailable) optional("cloth-config")
+        if (isFabric) optional("modmenu")
         minecraftVersionRange {
             start = mod.pub_start
             end = mod.pub_end
@@ -67,6 +70,8 @@ publishMods {
     curseforge {
         projectId = mod.curseforge
         accessToken = tokenDir("curseforge")
+        if (isClothConfigAvailable) optional("cloth-config")
+        if (isFabric) optional("modmenu")
         minecraftVersionRange {
             start = mod.pub_start
             end = mod.pub_end

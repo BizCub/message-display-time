@@ -1,4 +1,4 @@
 {
     "text.autoconfig.message_display_time.title":  "Message Display Time Settings",
-    "text.autoconfig.message_display_time.option.sec": "Number of seconds before messages disappear"
+    "text.autoconfig.message_display_time.option.sec": "Seconds before messages disappear"
 }

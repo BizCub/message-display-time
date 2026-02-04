@@ -1,4 +1,6 @@
 {
     "text.autoconfig.message_display_time.title": "Настройки Message Display Time",
-    "text.autoconfig.message_display_time.option.sec": "Количество секунд до исчезновения сообщений"
+    "text.autoconfig.message_display_time.option.sec": "Секунды до исчезновения сообщений",
+
+    "modmenu.descriptionTranslation.message_display_time": "Добавляет настройку для продолжительности отображения сообщений в чате"
 }

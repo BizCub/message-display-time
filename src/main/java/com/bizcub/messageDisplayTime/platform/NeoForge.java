@@ -1,5 +1,5 @@
 //? neoforge {
-/*package com.bizcub.messageDisplayTime.platforms;
+/*package com.bizcub.messageDisplayTime.platform;
 
 import com.bizcub.messageDisplayTime.MessageDisplayTime;
 import net.neoforged.fml.ModLoadingContext;

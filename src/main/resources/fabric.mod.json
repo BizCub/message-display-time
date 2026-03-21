@@ -15,10 +15,7 @@
     },
     "entrypoints": {
         "main": [
-            "com.bizcub.messageDisplayTime.platforms.Fabric"
-        ],
-        "modmenu": [
-            "com.bizcub.messageDisplayTime.platforms.Fabric$ModMenu"
+            "com.bizcub.messageDisplayTime.platform.Fabric"
         ]
     },
     "mixins": [

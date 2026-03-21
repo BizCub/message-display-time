@@ -1,5 +1,5 @@
 //? forge {
-/*package com.bizcub.messageDisplayTime.platforms;
+/*package com.bizcub.messageDisplayTime.platform;
 
 import com.bizcub.messageDisplayTime.MessageDisplayTime;
 import com.bizcub.messageDisplayTime.config.Configs;

@@ -59,9 +59,10 @@ neoforge="6-beta"
 cloth_config="21.11.153"
 modmenu="17.0.0-beta.2"
 
-["26.1"]
-forge="62.0.3"
-neoforge="5-beta"
+["26.1.1"]
+forge="63.0.0"
+neoforge="0-beta"
 cloth_config="26.1.154"
 modmenu="18.0.0-alpha.8"
+pub_start="26.1"
 pub_end="latest"

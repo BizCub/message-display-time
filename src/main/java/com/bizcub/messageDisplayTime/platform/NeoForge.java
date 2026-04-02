@@ -1,19 +1,20 @@
 //? neoforge {
 /*package com.bizcub.messageDisplayTime.platform;
 
-import com.bizcub.messageDisplayTime.MessageDisplayTime;
+import com.bizcub.messageDisplayTime.Main;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-@Mod(MessageDisplayTime.modId)
+@Mod(Main.MOD_ID)
 public class NeoForge {
 
     public NeoForge() {
-        MessageDisplayTime.init();
+        Main.init();
 
-        ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () -> (container, parent) -> {
-            return PlatformInit.getScreen(parent);
-        });
+        ModLoadingContext.get().registerExtensionPoint(
+                IConfigScreenFactory.class, () -> (minecraft, screen) ->
+                        PlatformInit.getScreen(screen)
+        );
     }
 }*///?}

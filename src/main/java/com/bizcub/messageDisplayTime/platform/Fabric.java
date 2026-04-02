@@ -1,7 +1,7 @@
 //? fabric {
 package com.bizcub.messageDisplayTime.platform;
 
-import com.bizcub.messageDisplayTime.MessageDisplayTime;
+import com.bizcub.messageDisplayTime.Main;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import net.fabricmc.api.ModInitializer;
@@ -10,7 +10,7 @@ public class Fabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        MessageDisplayTime.init();
+        Main.init();
     }
 
     public static class ModMenu implements ModMenuApi {

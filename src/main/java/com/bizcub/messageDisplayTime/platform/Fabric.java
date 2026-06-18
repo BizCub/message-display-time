@@ -2,8 +2,6 @@
 package com.bizcub.messageDisplayTime.platform;
 
 import com.bizcub.messageDisplayTime.Main;
-import com.terraformersmc.modmenu.api.ConfigScreenFactory;
-import com.terraformersmc.modmenu.api.ModMenuApi;
 import net.fabricmc.api.ModInitializer;
 
 public class Fabric implements ModInitializer {
@@ -11,13 +9,5 @@ public class Fabric implements ModInitializer {
     @Override
     public void onInitialize() {
         Main.init();
-    }
-
-    public static class ModMenu implements ModMenuApi {
-
-        @Override
-        public ConfigScreenFactory<?> getModConfigScreenFactory() {
-            return PlatformInit::getScreen;
-        }
     }
 }//?}

@@ -7,7 +7,7 @@
     "license": "${license}",
     "icon": "icon.png",
     "authors": [
-        "Bizarre Cube"
+        "${author}"
     ],
     "contact": {
         "homepage": "https://modrinth.com/project/${modrinth}",
@@ -16,11 +16,9 @@
     "entrypoints": {
         "main": [
             "com.bizcub.messageDisplayTime.platform.Fabric"
-        ],
-        "modmenu": [
-            "com.bizcub.messageDisplayTime.platform.Fabric$ModMenu"
         ]
     },
+    "accessWidener" : "${mixin}.ct",
     "mixins": [
         "${mixin}.mixins.json"
     ]

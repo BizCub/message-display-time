@@ -4,7 +4,9 @@
     "mixins": [
     ],
     "client": [
-        "ChatHudMixin"
+        "ChatHudMixin",
+        "ChatOptionsScreenMixin",
+        "OptionsMixin"
     ],
     "injectors": {
         "defaultRequire": 1

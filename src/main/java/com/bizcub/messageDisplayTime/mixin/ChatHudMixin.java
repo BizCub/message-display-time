@@ -14,6 +14,6 @@ public class ChatHudMixin {
     /*? 1.21.11*/ //@ModifyVariable(method = "render(Lnet/minecraft/client/gui/components/ChatComponent$ChatGraphicsAccess;IIZ)V", at = @At("HEAD"), argsOnly = true, ordinal = 1)
     /*? <=1.21.10*/ //@ModifyVariable(method = "render*", at = @At("HEAD"), argsOnly = true, ordinal = 0)
     private int render(int ticks) {
-        return ticks + 200 - (20 * Main.getConfig().sec());
+        return ticks + 200 - (20 * Main.messageDisplayTimeSlider.get());
     }
 }

@@ -1,20 +1,27 @@
-# Fabric versions see: https://fabricmc.net/develop
-# Forge versions see: https://files.minecraftforge.net
-# NeoForge versions see: https://neoforged.net
-# Extra dependencies see: https://linkie.shedaniel.dev/dependencies
+### Mod properties
+mod.name="Message Display Time"
+mod.id="message-display-time"
+mod.version="1.2"
+mod.description="Adds a setting for the duration of displaying messages in the chat"
 
+### Publishing
+mod.modrinth="XBxmgWxC"
+mod.curseforge="1327015"
+mod.github="message-display-time"
+
+### Subprojects
 ["26.2"]
-pub_end="latest"
+pub-end="latest"
 
 ["1.21.1"]
-pub_start="1.20.5"
-pub_end="1.21.10"
+pub-start="1.20.5"
+pub-end="1.21.10"
 
 ["1.21.1-forge"]
-pub_start="1.20.6"
+pub-start="1.20.6"
 
 ["1.20.1"]
-pub_end="1.20.4"
+pub-end="1.20.4"
 
 ["1.19.3"]
-pub_end="1.19.4"
+pub-end="1.19.4"

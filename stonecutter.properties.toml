@@ -1,6 +1,6 @@
 ### Mod properties
 mod.name="Message Display Time"
-mod.id="message-display-time"
+mod.id="message_display_time"
 mod.version="1.2"
 mod.description="Adds a setting for the duration of displaying messages in the chat"
 

@@ -1,6 +1,6 @@
-package com.bizcub.messageDisplayTime.mixin;
+package io.github.bizcub.messageDisplayTime.mixin;
 
-import com.bizcub.messageDisplayTime.Main;
+import io.github.bizcub.messageDisplayTime.Main;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.OptionInstance;
 import net.minecraft.client.Options;

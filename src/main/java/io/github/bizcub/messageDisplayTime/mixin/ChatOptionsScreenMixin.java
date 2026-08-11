@@ -1,6 +1,6 @@
-package com.bizcub.messageDisplayTime.mixin;
+package io.github.bizcub.messageDisplayTime.mixin;
 
-import com.bizcub.messageDisplayTime.Main;
+import io.github.bizcub.messageDisplayTime.Main;
 import net.minecraft.client.OptionInstance;
 //~ if >=1.20.2 'ChatOptionsScreen' -> 'options.ChatOptionsScreen'
 import net.minecraft.client.gui.screens.options.ChatOptionsScreen;

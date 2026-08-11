@@ -1,7 +1,7 @@
 //? fabric {
-package com.bizcub.messageDisplayTime.platform;
+package io.github.bizcub.messageDisplayTime.platform;
 
-import com.bizcub.messageDisplayTime.Main;
+import io.github.bizcub.messageDisplayTime.Main;
 import net.fabricmc.api.ModInitializer;
 
 public class Fabric implements ModInitializer {

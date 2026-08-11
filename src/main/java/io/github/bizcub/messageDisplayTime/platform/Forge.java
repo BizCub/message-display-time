@@ -1,7 +1,7 @@
 //? forge {
-/*package com.bizcub.messageDisplayTime.platform;
+/*package io.github.bizcub.messageDisplayTime.platform;
 
-import com.bizcub.messageDisplayTime.Main;
+import io.github.bizcub.messageDisplayTime.Main;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod(Main.MOD_ID)

@@ -1,4 +1,4 @@
-package com.bizcub.messageDisplayTime;
+package io.github.bizcub.messageDisplayTime;
 
 import net.minecraft.client.OptionInstance;
 

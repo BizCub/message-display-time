@@ -1,6 +1,6 @@
-package com.bizcub.messageDisplayTime.mixin;
+package io.github.bizcub.messageDisplayTime.mixin;
 
-import com.bizcub.messageDisplayTime.Main;
+import io.github.bizcub.messageDisplayTime.Main;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;

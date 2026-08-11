@@ -1,6 +1,6 @@
 {
     "required": true,
-    "package": "com.bizcub.messageDisplayTime.mixin",
+    "package": "io.github.bizcub.messageDisplayTime.mixin",
     "mixins": [
     ],
     "client": [

@@ -1,7 +1,7 @@
 ## Message Display Time
 A mod that adds a setting for seconds before messages in chat disappear.
 
-![preview](https://i.postimg.cc/65QGyMx8/output-compress-video-online-com.gif)
+![preview](https://i.postimg.cc/W3rmtXrs/preview.gif)
 
 ## Usage
 The mod adds a slider to the chat settings menu, which allows you to adjust the number of seconds before a message disappears in the chat.

@@ -2,13 +2,11 @@ package io.github.bizcub.messageDisplayTime.mixin;
 
 import io.github.bizcub.messageDisplayTime.Main;
 import net.minecraft.client.OptionInstance;
-//~ if >=1.21 'ChatOptionsScreen' -> 'options.ChatOptionsScreen'
 import net.minecraft.client.gui.screens.options.ChatOptionsScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.ArrayList;
@@ -24,15 +22,9 @@ public class ChatOptionsScreenMixin {
         return optionsList.toArray(new OptionInstance[0]);
     }
 
-    //? >=1.21 {
     @Inject(method = "options", at = @At("RETURN"), cancellable = true)
     private static void addTimeDisplayOption(CallbackInfoReturnable<OptionInstance<?>[]> cir) {
         cir.setReturnValue(getUpdatedOptionInstance(cir.getReturnValue()));
     }
 
-    //?} else {
-    /*@ModifyArg(method = "<init>", index = 3, at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screens/SimpleOptionsSubScreen;<init>(Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/Options;Lnet/minecraft/network/chat/Component;[Lnet/minecraft/client/OptionInstance;)V"))
-    private static OptionInstance[] addTimeDisplayOption(OptionInstance[] options) {
-        return getUpdatedOptionInstance(options);
-    }*///?}
 }
